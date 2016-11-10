@@ -1,0 +1,107 @@
+
+	<div class="row">
+		<p> Date you would like service to begin: </p>
+		<input type="date"  class="form-control" ng-model="date" name=startdate>
+	</div>
+	<div class="row">
+		<h3>Will you require any application customizations?</h3>
+		<input type="radio" name="showHide" ng-model="customizations" ng-value="true">Yes
+		<input type="radio" name="showHide" ng-model="customizations" ng-value="false">NO
+		<div ng-show="customizations">
+			<label>first name:</label>
+			<input type="phone" ng-model="">
+			<label>last name:</label>
+			<input type="phone" ng-model="">
+			<label>email:</label>
+
+			<input type="email" ng-model="">
+		</div>
+	</div>
+	<div class="row">
+		<p>Will you need any support with integration to your mobile or online banking application?</p>
+		<input type="radio" name="showHide" ng-model="integration" ng-value="true">Yes
+		<input type="radio" name="showHide" ng-model="integration" ng-value="false">NO
+		<div ng-show="integration">
+			<label>please identify who the primary lead for integration in your organization will be.  We will follow up to make an appointment to discuss the customizations.</label></br>
+			<label>first name:</label>
+			<input type="phone" ng-model="">
+			<label>last name:</label>
+			<input type="phone" ng-model="">
+			<label>email:</label>
+			<input type="email" ng-model="">
+		</div>
+		<div>
+		<div class="row">
+			<h3> Will you be using your company’s Active Directory for user management? </h3>
+			<input type="radio" name="showHide" ng-model="directory" ng-value="true">Yes
+			<input type="radio" name="showHide" ng-model="directory" ng-value="false">NO
+			<div ng-show="directory">
+				<label>please provide the names of your organization’s Active Directory leads who will be responsible for this.  We will follow up to make an appointment and execute the integration.</label></br>
+				<label>first name:</label>
+				<input type="phone" ng-model="">
+				<label>last name:</label>
+				<input type="phone" ng-model="">
+				<label>email:</label>
+				<input type="email" ng-model="">
+			</div>
+			</div>
+
+
+			
+			<div ng-hide=directory>
+			<div class="row">
+			<h3>please list the following individuals for key roles:</h3>
+			<div ng-repeat="techadmin in techadmins">
+				<label>first name:</label>
+				<input type="text" ng-model="techadmin.fname">
+				<label>last name:</label>
+				<input type="text" ng-model="techadmin.lname">
+				<label>email:</label>
+				<input type="email" ng-model="techadmin.email">
+				<button class="remove" ng-show="$last" ng-click="removeField('admin')">-</button>
+			</div>
+			<button ng-click="addField('admin')">Add more</button>
+			</div>
+		<div class="row">
+		<label>Business Owners</label>
+			<div  ng-repeat="owner in bizOwners">
+				<label>first name:</label>
+				<input type="phone" ng-model="owner.fname">
+				<label>last name:</label>
+				<input type="phone" ng-model="owner.lname">
+				<label>email:</label>
+				<input type="email" ng-model="owner.email">
+				<button class="remove" ng-show="$last" ng-click="removeField('owner')">-</button>
+			</div>
+			<button class="addfields" ng-click="addField('owner')">Add fields</button>
+		</div>
+		<div class="row">
+			<label>Credit Account Managers</label>
+			<div ng-repeat="manager in Managers">
+				<label>first name:</label>
+				<input type="text" ng-model="manager.fname">
+				<label>last name:</label>
+				<input type="text" ng-model="manager.lname">
+				<label>email:</label>
+				<input type="email" ng-model="manager.email">
+				<button class="remove" ng-show="$last" ng-click="removeField('manager')">-</button>
+			</div>
+			<button ng-click="addField('manager')">Add more</button>
+		</div>
+</div>
+<label>Choice Banking charges $.02 for each dollar loaned through our system at the time of funds disbursement.  The amount is automatically calculated based on the disbursed amount, and billed to the primary Lender Account.  For revolving accounts and credit cards, the $.02 is calculated on the upper limit offered to the borrower of the product. Please acknowledge these billing policies by checking the box here:</label>
+<input type="checkbox" name="policy" ng-model="accept">
+
+<h4>Please initial below to accept the billing policy.</h4>
+<label> Signature </label>
+<input type="text" name="signanture" placeholder="signature">
+<label> Date</label>
+<input type="date" name="acceptdate" >
+<div class="col-lg-offset-2">
+	
+</div>
+<button ui-sref="page2" class="btn btn-info">Back</button>
+<button ng-click="submit()" class="btn btn-info">Next</button>
+<button ng-click="submit()" class="btn btn-info">Save</button>
+
+</div>

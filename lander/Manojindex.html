@@ -1,0 +1,160 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Lander page</title>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<link href="style.css" rel="stylesheet">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+<body>
+<nav id="header" class="navbar menu">
+  <div id="header-container" class="container navbar-container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+      <a id="brand" class="navbar-brand" href="#"> <img src="logo.png" alt=""></a> </div>
+    <div id="navbar" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav pull-right">
+        <li class="active"><a href="#">PRODUCTS</a></li>
+        <li><a href="#about">SOLUTIONS</a></li>
+        <li><a class="m-btn" href="#contact">REQUEST A DEMO</a></li>
+      </ul>
+    </div>
+    <!-- /.nav-collapse --> 
+  </div>
+  <!-- /.container --> 
+</nav>
+<!-- /.navbar -->
+
+<section>
+  <div class="container">
+    <div class="m-form">
+      <form class="form-horizontal" ng-controller="dropdownCtrl">
+        <div class="row">
+        <div class="col-sm-10">
+          <div class="form-group">
+            <label>Institution Primary Account Owner Name: </label>
+            <input type="text" class="form-group lg-input" ng-model="Ownname" required>
+          </div>
+        </div>
+        <div class="col-sm-10">
+          <div class="form-group">
+            <div class="row">
+              <div class="col-sm-6">
+                <label> Email: </label>
+                <input type="email" class="form-group" ng-model="Ownname" required>
+              </div>
+              <div class="col-sm-6">
+                <label> Phone: </label>
+                <input type="tel" class="form-group" ng-model="Ownname" required>
+              </div>
+            </div>
+          </div>
+          </div>
+        <div class="col-sm-10">
+            <div class="form-group">
+              <h4> <strong>Street Address </strong></h4>
+              <div class="row">
+                <div class="col-sm-6">
+                  <label> City: </label>
+                  <input type="text" class="form-group" ng-model="Ownname" required>
+                </div>
+                <div class="col-sm-6">
+                  <label> Province/State: </label>
+                  <input type="text" class="form-group" ng-model="Ownname" required>
+                </div>
+                <div class="col-sm-6 p-right">
+                  <label> Country </label>
+                  <select class="drop-select">
+                  	<option>US</option>
+                    <option>UK</option>
+                    <option>Canada</option>
+                    
+                  </select>
+                </div>
+                <div class="col-sm-6">
+                  <label> Zip/Postal Code: </label>
+                  <input type="text" class="form-group" ng-model="Ownname" required>
+                </div>
+              </div>
+            </div>
+          </div>
+        <div class="col-sm-10">
+            <div class="form-group">
+              <h4> <strong>Institution Information</strong></h4>
+              <div class="col-sm-12">
+                  <div class="form-group">
+                    <label>Institution Name: </label>
+                    <input type="text" class="form-group lg-input" ng-model="Ownname" required>
+                  </div>
+               </div>
+               <div class="m-12 clearfix">
+               <h5> Check this box if Head Office Address is the same as that of the Primary Account Owner:</h5> <p>If not, please provide Head Office Address below: <input type="checkbox" value="select"> Another Address<br></p></div>
+        
+              <div class="row">
+              	<div class="col-sm-6">
+                  <label> City: </label>
+                  <input type="text" class="form-group" ng-model="Ownname" required>
+                </div>
+                <div class="col-sm-6">
+                  <label> Province/State: </label>
+                  <input type="text" class="form-group" ng-model="Ownname" required>
+                </div>
+                <div class="col-sm-6  p-right">
+                  <label> Country </label>
+                  <select class="drop-select">
+                  	<option>US</option>
+                    <option>UK</option>
+                    <option>Canada</option>
+                  </select>
+                </div>
+                <div class="col-sm-6">
+                  <label> Zip/Postal Code: </label>
+                  <input type="text" class="form-group" ng-model="Ownname" required>
+                </div>
+              </div>
+            </div>
+          </div>
+        <div class="col-sm-6">
+        	<div class="form-group">
+            	<button class="btn btn-info"> Next </button>
+            </div>
+        </div>
+        </div>
+        <div class="row">
+        <div class="2-step">
+        	<div class="check">
+            <label> Type of Financial Institution: (check all those that apply) </label>
+            	<input type="checkbox" value="dgfd">gkjsf
+            </div>
+        </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+<footer class="ftr">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9">
+        <ul class="f-menu">
+          <li> <a href="#"> PRODUCTS</a></li>
+          <li> <a href="#"> SOLUTIONS</a></li>
+          <li> <a href="#"> ABOUT </a></li>
+          <li> <a href="#"> CONTACT </a></li>
+          <li> <a href="#"> TERMS & CONDITIONS </a></li>
+          <li> <a href="#"> PRIVACY </a></li>
+          <li> <a href="#"> POLICY</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <div class="social-icon"> <a href="#"><i id="social-fb" class="fa fa-facebook fa-2x social"></i></a> <a href="#"><i id="social-tw" class="fa fa-twitter fa-2x social"></i></a> <a href="#"><i id="social-gp" class="fa fa-google-plus fa-2x social"></i></a> <a href="#"><i id="social-em" class="fa fa-youtube-play fa-2x social"></i></a> </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script> 
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>
